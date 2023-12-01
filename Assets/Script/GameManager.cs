@@ -5,8 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    
+    public RectTransform Canvas;
 
     public Transform[] waypoints;
+
+    public Transform activePool;
+    public Transform recyclePool;
 
 
     private void Awake()
