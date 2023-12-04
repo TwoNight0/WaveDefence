@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Transform activePool;
     public Transform recyclePool;
 
+    private bool isEnd = false;
 
     private void Awake()
     {
@@ -36,4 +37,27 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    void LifeZero()
+    {
+        if (PlayerStats.lives <= 0)
+        {
+            isEnd = true;
+            EndGame();
+        }
+    }
+
+    void EndGame() 
+    {
+        if (isEnd)
+        {
+            Debug.Log("Game Over");
+        }
+        else
+        {
+            return;
+        }
+    }
+
+
 }

@@ -6,7 +6,7 @@ public class Undead : Enemy
 {
     Undead()
     {
-        moveSpeed = 15.0f;
+        //moveSpeed = 15.0f;
     }
 
     
@@ -14,12 +14,12 @@ public class Undead : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        target = GameManager.instance.waypoints[waypointindex];
+        //target = GameManager.instance.waypoints[waypointindex];
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveTarget(transform);
+        //MoveTarget(transform);
     }
 }

@@ -6,37 +6,43 @@ public abstract class Enemy : MonoBehaviour
 {
     protected float maxHp;
     protected float nowHp;
-    protected float moveSpeed = 1.0f;
-    
 
-    protected Transform target;
-    protected int waypointindex = 0;
+    private float startSpeed;
+    private float speed;
 
-    /// <param name="myPos"> 내 위치</param>
-    public void MoveTarget(Transform myPos)
+    protected int reward;
+
+
+    private void Start()
     {
-        Vector3 dir = target.position - myPos.position;
-        myPos.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
-
-        if(Vector3.Distance(myPos.position, target.position) <= 0.4f)
-        {
-            GetNextWaypoint();
-        }
+        speed = startSpeed;
     }
-
     /// <summary>
-    /// 다음 웨이포인트를 가져옴
+    /// 물리, 마법 데미지 둘다 고려
     /// </summary>
-    public void GetNextWaypoint()
+    public void TakeDamage(float ad, float ap)
     {
-        if( waypointindex >= GameManager.instance.waypoints.Length -1)
-        {
-            this.gameObject.SetActive(false);
-            return;
-        }
+        nowHp -= (ad+ap) ;
 
-        waypointindex++;
-        target = GameManager.instance.waypoints[waypointindex];
+        if(nowHp <= 0)
+        {
+            Die();
+        }
+    }
+    /// <summary>
+    /// 슬로우는 걸었지만 끝나면 속도를 다시 되돌려주는 과정이 필요하다
+    /// </summary>
+    /// <param name="pct"></param>
+    public void Slow(float pct)
+    {
+        speed = startSpeed * (1f - pct);
     }
 
+
+    public void Die()
+    {
+        //돈추가
+        PlayerStats.Money += reward;
+        this.gameObject.SetActive(false);
+    }
 }
