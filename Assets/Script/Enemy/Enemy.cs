@@ -12,6 +12,17 @@ public abstract class Enemy : MonoBehaviour
 
     protected int reward;
 
+    /// <summary>
+    /// 특성을 암시
+    /// </summary>
+    protected List<int> types;
+
+    //속성들
+    protected enum TYPES
+    {
+        FAST,
+
+    }
 
     private void Start()
     {
