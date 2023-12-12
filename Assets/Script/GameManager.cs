@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Transform activePool;
     public Transform recyclePool;
 
+
+
     private bool isEnd = false;
 
     private void Awake()

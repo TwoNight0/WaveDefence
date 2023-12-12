@@ -10,7 +10,9 @@ public class Node : MonoBehaviour
     private Color startColor;
     public Color UnableColor;
 
-    public TurretBlueprint blueprint;  
+    public TurretBlueprint blueprint;
+
+    public bool isBuild = false;
 
     [Header("Optional")]
     public GameObject turret;
@@ -19,10 +21,24 @@ public class Node : MonoBehaviour
 
     public Vector3 offset;
 
+    public Node Node_top;
+    public Node Node_bot;
+    public Node Node_left;
+    public Node Node_right;
+    
+    
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+
+        if (gameObject.name == "Node 44") {
+            Debug.Log(Node_right.name);
+            Debug.Log(Node_left.name);
+        }
+        
+
     }
 
     private void OnMouseEnter()

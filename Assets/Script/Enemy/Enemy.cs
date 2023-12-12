@@ -27,6 +27,7 @@ public abstract class Enemy : MonoBehaviour
     private void Start()
     {
         speed = startSpeed;
+        
     }
     /// <summary>
     /// 물리, 마법 데미지 둘다 고려
