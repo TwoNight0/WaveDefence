@@ -33,10 +33,10 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
 
-        if (gameObject.name == "Node 44") {
-            Debug.Log(Node_right.name);
-            Debug.Log(Node_left.name);
-        }
+        //if (gameObject.name == "Node 44") {
+        //    Debug.Log(Node_right.name);
+        //    Debug.Log(Node_left.name);
+        //}
         
 
     }

@@ -13,9 +13,19 @@ public class GameManager : MonoBehaviour
     public Transform activePool;
     public Transform recyclePool;
 
+    public bool isReady = false;
+    public bool isWave = false;
 
 
     private bool isEnd = false;
+
+    private int round = 1;
+
+    public int PubRound
+    {
+        get => round;
+        set => round = value;
+    }
 
     private void Awake()
     {
@@ -31,7 +41,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        isReady = true;
+
+
     }
 
     // Update is called once per frame
