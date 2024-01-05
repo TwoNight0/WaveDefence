@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4592720183628879468}
   - component: {fileID: 4050468693941079650}
+  - component: {fileID: -7087383689049233843}
   m_Layer: 0
   m_Name: MushroomSmilePBRMaskTint
   m_TagString: Untagged
@@ -217,6 +218,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7087383689049233843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816604974939835606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955a61c9709be0141ae867ab50d7be70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4108714871486676479
 GameObject:
   m_ObjectHideFlags: 0

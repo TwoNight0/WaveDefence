@@ -1127,6 +1127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4527530870830992880}
   - component: {fileID: 4527530870837994034}
+  - component: {fileID: -1577157538371628566}
   m_Layer: 0
   m_Name: LizardWarriorPBRMaskTint
   m_TagString: Untagged
@@ -1173,6 +1174,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1577157538371628566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4527530870830567824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b189e7cc64fd57488fbe5b17be5f62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4527530870830567826
 GameObject:
   m_ObjectHideFlags: 0

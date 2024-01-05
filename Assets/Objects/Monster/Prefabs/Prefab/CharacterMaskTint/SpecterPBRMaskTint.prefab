@@ -1884,6 +1884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7638419679063406088}
   - component: {fileID: 7638419679055944064}
+  - component: {fileID: 83147434375610323}
   m_Layer: 0
   m_Name: SpecterPBRMaskTint
   m_TagString: Untagged
@@ -1930,6 +1931,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &83147434375610323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638419679063239658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e7c35bd5e293e478d4ca76fd81bd85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7638419679063239660
 GameObject:
   m_ObjectHideFlags: 0
