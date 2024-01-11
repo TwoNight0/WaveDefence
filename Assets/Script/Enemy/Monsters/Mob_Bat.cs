@@ -37,7 +37,7 @@ public class Mob_Bat : Enemy
         transform.LookAt(target);
 
 
-        Debug.Log(hpBar);
+        //Debug.Log(hpBar);
 
         //this.rotateHpbar(hpBar);
     }
@@ -46,5 +46,6 @@ public class Mob_Bat : Enemy
     void Update()
     { 
         MoveToTarget(this.transform , speed);
+
     }
 }

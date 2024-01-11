@@ -19,10 +19,10 @@ public class MngBuild : MonoBehaviour
     }
 
     //돈이 부족하면 false, 충분하거나 같으면 true
-    public bool HasMoney
-    {
-        get { return PlayerStats.Money >= turretToBuild.cost; }
-    }
+    //public bool HasMoney
+    //{
+    //    get { return PlayerStats.Money >= turretToBuild.cost; }
+    //}
 
     private void Awake()
     {

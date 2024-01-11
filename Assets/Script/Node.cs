@@ -52,15 +52,15 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (MngBuild.instance.HasMoney)
-        {
-            //°´Ã¼ »ö»ó¹Ù²Ù±â
-            rend.material.color = hoverColor;
-        }
-        else
-        {
-            rend.material.color = UnableColor;
-        }
+        //if (MngBuild.instance.HasMoney)
+        //{
+        //    //°´Ã¼ »ö»ó¹Ù²Ù±â
+        //    rend.material.color = hoverColor;
+        //}
+        //else
+        //{
+        //    rend.material.color = UnableColor;
+        //}
     }
 
     private void OnMouseDown()
@@ -79,7 +79,7 @@ public class Node : MonoBehaviour
             return;
         }
         
-        BuildTurret(blueprint);
+        //BuildTurret(blueprint);
     }
 
     private void OnMouseExit()
@@ -92,22 +92,22 @@ public class Node : MonoBehaviour
         return transform.position + offset;
 
     }
-    public void BuildTurret(TurretBlueprint blueprint)
-    {
-        if (PlayerStats.Money < blueprint.cost)
-        {
-            Debug.Log("µ·ÀÌ ¸ðÀÚ¶÷");
-            return;
-        }
+    //public void BuildTurret(TurretBlueprint blueprint)
+    //{
+    //    if (PlayerStats.Money < blueprint.cost)
+    //    {
+    //        Debug.Log("µ·ÀÌ ¸ðÀÚ¶÷");
+    //        return;
+    //    }
 
-        PlayerStats.Money -= blueprint.cost;
+    //    PlayerStats.Money -= blueprint.cost;
 
-        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
-        turret = _turret;
+    //    GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+    //    turret = _turret;
 
 
-        //ºôµå ÀÌÆåÆ®
+    //    //ºôµå ÀÌÆåÆ®
 
-        Debug.Log("Turret build, Money left: " + PlayerStats.Money);
-    }
+    //    Debug.Log("Turret build, Money left: " + PlayerStats.Money);
+    //}
 }

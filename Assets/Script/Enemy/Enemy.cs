@@ -65,7 +65,7 @@ public abstract class Enemy : MonoBehaviour
     public void Die()
     {
         //돈추가
-        PlayerStats.Money += reward;
+        //PlayerStats.Money += reward;
         this.gameObject.SetActive(false);
     }
 
@@ -94,8 +94,7 @@ public abstract class Enemy : MonoBehaviour
     {
         Vector3 dir = target.position - myPos.position;
         myPos.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
-
-        
+ 
 
         if (Vector3.Distance(myPos.position, target.position) <= 0.4f)
         {
@@ -111,14 +110,14 @@ public abstract class Enemy : MonoBehaviour
     public void EndPath()
     {
         //라이프 포인트 차감
-        PlayerStats.lives--;
+        //PlayerStats.lives--;
         this.gameObject.SetActive(false);
        
     }
 
     protected void rotateHpbar(RectTransform hpBar)
     {
-        Quaternion rotationOffset = Quaternion.Euler(38, 0, 0);
+        Quaternion rotationOffset = Quaternion.Euler(70, 0, 0);
 
         hpBar.transform.rotation = rotationOffset;
     }

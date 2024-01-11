@@ -6,6 +6,8 @@ using TMPro;
 
 public class MngEnemy : MonoBehaviour
 {
+    public static MngEnemy instance;
+
     [Header("몬스터 프리팹")]
     //----Transform
     public List<GameObject> enemyPrefabs;
@@ -71,6 +73,14 @@ public class MngEnemy : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
         InitMonsterNumbering();
     }
 

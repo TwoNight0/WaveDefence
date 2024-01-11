@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class MngShop : MonoBehaviour
 {
-    public TurretBlueprint standardTurret;
+    public static MngShop instance;
+
+    public List<GameObject> unit_list;
+
+    public Transform unitSpawnPoint;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +36,7 @@ public class MngShop : MonoBehaviour
 
     public void SelectStandardTurret()
     {
-        MngBuild.instance.SelectTurretToBuild(standardTurret);
+       
 
     }
 
