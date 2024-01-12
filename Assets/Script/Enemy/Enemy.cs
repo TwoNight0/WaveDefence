@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class Enemy : MonoBehaviour
 {
+    private Btn3x3 btn3x3;
+   
     protected float maxHp;
     protected float nowHp;
 
@@ -11,12 +14,15 @@ public abstract class Enemy : MonoBehaviour
     protected float speed;
 
     protected Transform target;
+    
+    
     protected RectTransform hpBar;
     protected GameObject hpBarObj;
 
     protected int waypointindex = 0;
 
     protected int reward;
+
 
 
     /// <summary>
@@ -36,8 +42,48 @@ public abstract class Enemy : MonoBehaviour
     private void Start()
     {
         speed = startSpeed;
-        
+        btn3x3 = GameManager.instance.btn3x3Obj.GetComponent<Btn3x3>();
     }
+
+    protected void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+
+        Debug.Log("Enemy");
+        GameManager.instance.btn_3x3_state = GameManager.Btn_3x3_state.CLICK_ENEMY;
+
+        #region btn 3x3 Setting
+        //0
+        btn3x3.ClearSet(0);
+
+        //1
+        btn3x3.ClearSet(1);
+
+        //2
+        btn3x3.ClearSet(2);
+
+        //3
+        btn3x3.ClearSet(3);
+
+        //4
+        btn3x3.ClearSet(4);
+
+        //5
+        btn3x3.ClearSet(5);
+
+        //6
+        btn3x3.ClearSet(6);
+
+        //7
+        btn3x3.ClearSet(7);
+
+        //8
+        btn3x3.ClearSet(8);
+        #endregion
+    }
+
     /// <summary>
     /// 물리, 마법 데미지 둘다 고려
     /// </summary>

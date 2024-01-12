@@ -14,10 +14,17 @@ public class GameManager : MonoBehaviour
     public Transform activePool;
     public Transform recyclePool;
 
-    public List<Button> btn_3x3;
+    [Header("조합")]
+    public Transform combination1;
+    public Transform combination2;
+    public Transform combination3;
+
+    [Header("3x3 버튼")]
+    public GameObject btn3x3Obj;
+    public List<Button> ListBtn_3x3;
+
 
     public GameObject allowMoveObj;
-
     public Btn_3x3_state btn_3x3_state;
 
     public bool isReady = false;
@@ -26,25 +33,18 @@ public class GameManager : MonoBehaviour
 
     private bool isEnd = false;
 
-    private int round = 1;
-
     [HideInInspector]public PlayerStats playerStats;
 
-    public int PubRound
-    {
-        get => round;
-        set => round = value;
-    }
+  
 
     public enum Btn_3x3_state
     {
         NONE,
-        CLICK_CHARACTOR,
+        CLICK_Unit,
+        CLICK_ENEMY,
         CLICK_NEXUS,
-        CLICK_NOMAL_UNIT,
-        CLICK_RARE_UNIT,
-        CLICK_UNIQUE_UNIT,
-        CLICK_LEGENDARY_UNIT,
+        CLICK_MAGICSHOP,
+        CLICK_UPGRADESHOP,
     }
 
     private void Awake()
@@ -95,5 +95,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 라운드 시작버튼
+    /// </summary>
+    private void BtnRound()
+    {
+        isWave = true;
+    }
 
+    /// <summary>
+    /// 조합표
+    /// </summary>
+    private void BtnCombinationExplain()
+    {
+
+    }
+
+    /// <summary>
+    /// 조합버튼
+    /// </summary>
+    private void BtnCombination()
+    {
+
+    }
 }

@@ -91,7 +91,7 @@ public class MngEnemy : MonoBehaviour
 
         //웨어울프 하나 소환
         //소환하고 높이 지정을 좀해줘야할듯
-        Instantiate(enemyPrefabs[0], spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemyPrefabs[0], spawnPoint.position, spawnPoint.rotation, GameManager.instance.activePool);
 
     }
 
@@ -128,7 +128,7 @@ public class MngEnemy : MonoBehaviour
     /// <returns></returns>
     IEnumerator SpawnEnemyCouroutine()
     {
-        int round = GameManager.instance.PubRound;
+        int round = GameManager.instance.playerStats.PubRound;
         if (wavethema == WaveThema.Default)
         {
 #region 일반테마 라운드 구성

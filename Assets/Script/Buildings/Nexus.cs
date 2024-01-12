@@ -6,50 +6,61 @@ using UnityEngine.UI;
 
 public class Nexus : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Btn3x3 btn3x3;
+    
     void Start()
     {
-       //Debug.Log( GameManager.instance.btn_3x3[0]);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Debug.Log( GameManager.instance.btn_3x3[0]);
+        btn3x3 = GameManager.instance.btn3x3Obj.GetComponent<Btn3x3>();
     }
 
     private void OnMouseDown()
     {
-        //if (EventSystem.current.IsPointerOverGameObject())
-        //    return;
-        //클릭하면 1,2,3~9를 수정해야해
-        //이미지랑 버튼 역할을 바꿔줘야하거든?
-        //건물을 클릭하면 버튼의 상태버튼을 바꾸자 3x3 state -> 
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        
+
 
         Debug.Log("성클릭됨");
         GameManager.instance.btn_3x3_state = GameManager.Btn_3x3_state.CLICK_NEXUS;
 
-        //3x3 이미지들 변경 
-        ChangeBtnImgbyString(0, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(1, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(2, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(3, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(4, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(5, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(6, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(7, "BtnImages/Pictoicon_Battle");
-        ChangeBtnImgbyString(8, "BtnImages/Pictoicon_Battle");
+        #region btn 3x3 Setting
+        //0 일반 유닛 구매
+        btn3x3.BtnSetting(0, 100, 1, "IMG_Nexus/AddUnit", "IMG_ETC/Gold");
+        btn3x3.ChangeBtnPriceColor(0, btn3x3.colorGold);
 
+        //1 레어 유닛 구매
+        btn3x3.BtnSetting(1, 100, 2, "IMG_Nexus/AddUnit", "IMG_ETC/Gold");
+        btn3x3.ChangeBtnPriceColor(1, btn3x3.colorGold);
 
+        //2 에픽 유닛 구매
+        btn3x3.BtnSetting(2, 100, 3, "IMG_Nexus/AddUnit", "IMG_ETC/Gold");
+        btn3x3.ChangeBtnPriceColor(2, btn3x3.colorGold);
 
+        //3 정원 증가
+        btn3x3.BtnSetting(3, 100, 0, "IMG_Nexus/AddPopulation", "IMG_ETC/Gold");
+        btn3x3.ChangeBtnPriceColor(3, btn3x3.colorGold);
+        //maxpopulation 증가
+
+        //4
+        btn3x3.ClearSet(4);
+
+        //5
+        btn3x3.ClearSet(5);
+
+        //6
+        btn3x3.ClearSet(6);
+
+        //7
+        btn3x3.ClearSet(7);
+
+        //8
+        btn3x3.ClearSet(8);
+        #endregion
     }
 
-    public void ChangeBtnImgbyString(int index, string imageName)
-    {
-        Image btnChildImg = GameManager.instance.btn_3x3[index].transform.GetChild(0).GetComponent<Image>();
-        btnChildImg.sprite = Resources.Load<Sprite>(imageName);
-    }
-    
-    
+
+
+
 
 }
