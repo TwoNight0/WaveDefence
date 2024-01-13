@@ -218,7 +218,7 @@ public class Btn3x3 : MonoBehaviour
                 textGrade.color = colorEpic;
                 break;
             case 4:
-                textGrade.text = "Lagendary";
+                textGrade.text = "Lagend";
                 textGrade.color = colorLagendary;
                 break;
         }
