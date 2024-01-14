@@ -117,7 +117,7 @@ public class PlayerStats : MonoBehaviour
         mainFrame_Monster = mainFrame.Find("Monster").GetComponent<RectTransform>();
         mainFrame_Unit = mainFrame.Find("Unit").GetComponent<RectTransform>();
 
-        portrait = mainFrame.Find("portrait").GetComponent<Image>();
+        portrait = mainFrame.Find("portraitBack").GetChild(0).GetComponent<Image>();
 
         gold = startGold;
         iron = startIron;
