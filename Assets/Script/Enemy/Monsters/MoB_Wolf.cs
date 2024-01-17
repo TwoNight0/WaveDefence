@@ -8,6 +8,8 @@ public class Mob_Wolf : Enemy
     {
         maxHp = 100f;
         startSpeed = 10.0f;
+        physic_Defence = 10.0f;
+        magic_Defence = 0.0f;
 
         //º¸»ó
         reward = 10;
@@ -45,6 +47,6 @@ public class Mob_Wolf : Enemy
     // Update is called once per frame
     void Update()
     { 
-        MoveToTarget(this.transform , speed);
+        //MoveToTarget(this.transform , speed);
     }
 }

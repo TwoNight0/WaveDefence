@@ -499,9 +499,9 @@ GameObject:
   - component: {fileID: 95780783534388456}
   - component: {fileID: 7593466010438438483}
   - component: {fileID: 7711634487612076760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

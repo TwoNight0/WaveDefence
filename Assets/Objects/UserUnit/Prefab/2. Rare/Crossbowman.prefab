@@ -107,9 +107,9 @@ GameObject:
   - component: {fileID: 95538577629448610}
   - component: {fileID: -560558390731324134}
   - component: {fileID: -7850516870641861242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crossbowman
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

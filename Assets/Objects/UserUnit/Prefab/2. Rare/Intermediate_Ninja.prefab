@@ -5758,9 +5758,9 @@ GameObject:
   - component: {fileID: 1457448373648894377}
   - component: {fileID: 2649831326178832696}
   - component: {fileID: 705100043949039845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Intermediate_Ninja
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

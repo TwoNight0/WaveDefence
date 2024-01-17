@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5540633944302776156}
   - component: {fileID: 6844696650520554085}
   - component: {fileID: 2805630312214003471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Salaryman
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

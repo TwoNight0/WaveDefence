@@ -89,8 +89,6 @@ public class turret : MonoBehaviour
         {
             target = null;
         }
-
-
     }
 
 

@@ -4684,9 +4684,9 @@ GameObject:
   - component: {fileID: 5443893454052793056}
   - component: {fileID: 2044303171656064099}
   - component: {fileID: 5088806398583666742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IronMan
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -168,9 +168,9 @@ GameObject:
   - component: {fileID: 95689927657685620}
   - component: {fileID: -1480373003489209865}
   - component: {fileID: -3891756208078942150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lumberJack
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

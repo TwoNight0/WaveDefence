@@ -91,7 +91,7 @@ public class MngEnemy : MonoBehaviour
 
         //웨어울프 하나 소환
         //소환하고 높이 지정을 좀해줘야할듯
-        Instantiate(enemyPrefabs[0], spawnPoint.position, spawnPoint.rotation, GameManager.instance.activePool);
+        Instantiate(enemyPrefabs[mob_Bat], spawnPoint.position, spawnPoint.rotation, GameManager.instance.activePool);
 
     }
 

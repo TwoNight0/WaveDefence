@@ -438,9 +438,9 @@ GameObject:
   - component: {fileID: 95533605782024894}
   - component: {fileID: 692927976810519267}
   - component: {fileID: -5671322683310437667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mage
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

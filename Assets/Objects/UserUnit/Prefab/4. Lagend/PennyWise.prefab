@@ -1842,9 +1842,9 @@ GameObject:
   - component: {fileID: 2443938618801711636}
   - component: {fileID: -693216784468628220}
   - component: {fileID: 343820877769179097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PennyWise
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -438,9 +438,9 @@ GameObject:
   - component: {fileID: 95006841767016722}
   - component: {fileID: 2498169624253835641}
   - component: {fileID: 6393418613780017000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RockGolem
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

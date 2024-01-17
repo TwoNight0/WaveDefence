@@ -251,9 +251,9 @@ GameObject:
   - component: {fileID: 95978711929676162}
   - component: {fileID: 6112213601574825606}
   - component: {fileID: -6424082817850558273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DemonHunter
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

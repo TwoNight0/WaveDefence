@@ -1210,9 +1210,9 @@ GameObject:
   - component: {fileID: 95050259545192642}
   - component: {fileID: 6546159110736331518}
   - component: {fileID: 5033352528359495997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gargolye
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

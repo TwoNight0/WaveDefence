@@ -276,9 +276,9 @@ GameObject:
   - component: {fileID: 95065115426487442}
   - component: {fileID: 8062040055095587683}
   - component: {fileID: 7877565058135701940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IceMage
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -201,9 +201,9 @@ GameObject:
   - component: {fileID: 6593687570152286901}
   - component: {fileID: 3544291376383653070}
   - component: {fileID: 5611885091692656071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jester
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

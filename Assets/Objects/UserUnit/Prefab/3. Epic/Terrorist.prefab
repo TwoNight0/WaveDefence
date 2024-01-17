@@ -4558,9 +4558,9 @@ GameObject:
   - component: {fileID: 6067343141195501497}
   - component: {fileID: -1353653137788438136}
   - component: {fileID: 1133219024640032982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrorist
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

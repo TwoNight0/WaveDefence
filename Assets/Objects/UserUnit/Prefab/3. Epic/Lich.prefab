@@ -472,9 +472,9 @@ GameObject:
   - component: {fileID: 95830442387745868}
   - component: {fileID: -6667547908612103914}
   - component: {fileID: 4747996928317533440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lich
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject allowMoveObj;
     public Btn_3x3_state btn_3x3_state;
+    public GameState gameState;
 
     public bool isReady = false;
     public bool isWave = false;
@@ -35,8 +36,22 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]public PlayerStats playerStats;
 
-  
+    /// <summary>
+    /// 게임 상황 
+    /// </summary>
+    public enum GameState
+    {
+        None,
+        Ready,
+        Wave,
+        Defeat,
+        Victory
+    }
 
+
+    /// <summary>
+    /// 3x3버튼
+    /// </summary>
     public enum Btn_3x3_state
     {
         NONE,
@@ -74,6 +89,9 @@ public class GameManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// 게임패배
+    /// </summary>
     void LifeZero()
     {
         //if (PlayerStats.lives <= 0)

@@ -4307,9 +4307,9 @@ GameObject:
   - component: {fileID: 5047480193501460238}
   - component: {fileID: -6239185530654645818}
   - component: {fileID: 6808720647032110454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Samurai
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

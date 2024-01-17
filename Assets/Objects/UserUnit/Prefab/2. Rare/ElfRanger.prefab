@@ -797,9 +797,9 @@ GameObject:
   - component: {fileID: 95536290325807116}
   - component: {fileID: -5067638103431853911}
   - component: {fileID: -3788588417290734642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElfRanger
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1746,9 +1746,9 @@ GameObject:
   - component: {fileID: 95336719039465142}
   - component: {fileID: 763554314988444690}
   - component: {fileID: 5533249948636862985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HogRider
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

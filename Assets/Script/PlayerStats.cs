@@ -103,7 +103,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         UIInit();
-        UpdateUI("");
+        UpdateUI();
         TextName.enabled = false;
     }
 
@@ -160,7 +160,7 @@ public class PlayerStats : MonoBehaviour
     /// <summary>
     /// 유아이 업데이트
     /// </summary>
-    public void UpdateUI(string information) {
+    public void UpdateUI() {
         TextName.enabled = true;
         TextGold.text = gold.ToString();
         TextIron.text = iron.ToString();
@@ -168,6 +168,10 @@ public class PlayerStats : MonoBehaviour
         TextPopulation.text = population.ToString() + " / " + MaxPopulation.ToString();
         TextLife.text = lives.ToString();
         TextRound.text = "Round " + round.ToString() + " / " + LastRound.ToString();
+    }
+
+    public void AnnounceInfo(string information)
+    {
         TextInformation.text = information;
     }
 

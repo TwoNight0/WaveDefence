@@ -4905,9 +4905,9 @@ GameObject:
   - component: {fileID: 4265939110547819359}
   - component: {fileID: -1845427736835774063}
   - component: {fileID: 17464496979997982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hoodie
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

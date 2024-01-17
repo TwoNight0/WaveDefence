@@ -1810,9 +1810,9 @@ GameObject:
   - component: {fileID: 909545961731707778}
   - component: {fileID: -2913814705095004399}
   - component: {fileID: 4817700819548568439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bear
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

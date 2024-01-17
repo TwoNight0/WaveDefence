@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mob_Bat : Enemy
 {
@@ -11,10 +12,7 @@ public class Mob_Bat : Enemy
 
         //보상
         reward = 10;
-
     }
-
-    
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +20,17 @@ public class Mob_Bat : Enemy
         nowHp = maxHp;
         speed = startSpeed;
 
+        anim = GetComponent<Animator>();
+
         //HpBar 컨트롤
         this.hpBarObj = GameObject.Find("HpCanvas");
         hpBar = hpBarObj.GetComponent<RectTransform>();
+        hpSlider = hpBarObj.transform.GetChild(0).GetComponent<Slider>();
 
+        //Debug.Log("slider" + hpSlider);
         //hp Bar 텍스트 가져오기 -> 피해 입으면 슬라이더랑 다깍기
-
+        this.rotateHpbar(hpBar, new Vector3(-70,0,0));
+        //위치도조금 수정해야할듯?
 
         waypointindex++;
 
@@ -36,10 +39,11 @@ public class Mob_Bat : Enemy
 
         transform.LookAt(target);
 
-
+        btn3x3 = GameManager.instance.btn3x3Obj.GetComponent<Btn3x3>();
         //Debug.Log(hpBar);
 
-        //this.rotateHpbar(hpBar);
+        StartCoroutine(AnimDizzy(8));
+
     }
 
     // Update is called once per frame

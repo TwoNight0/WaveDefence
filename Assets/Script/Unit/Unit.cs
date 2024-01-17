@@ -6,11 +6,14 @@ using DG.Tweening;
 
 public class Unit : MonoBehaviour
 {
-    private Btn3x3 btn3x3;
-    private Transform target;
+
+    protected Btn3x3 btn3x3;
+    protected Transform target;
     private Enemy targetEnemy;
     //public Transform partToRotate;
     protected new string name = "temp";
+
+    public string characterType;
 
     [Header("유닛 설정")]
     protected float attackDamage = 10.0f;
@@ -21,12 +24,15 @@ public class Unit : MonoBehaviour
     protected float critical = 0.0f;
     protected float skillCoolDown = 0.0f;
     protected float moveSpeed = 3.0f;
-    
+
+    protected float fireCountdown = 1f;
+
     protected int mana = 3;
 
     protected int unitClass;
 
-    public bool autoMode = true;
+    public bool canMove = true;
+    public bool attackmode = true;
 
     [Header("유니티 설정")]
     public string enemyTag = "Enemy";
@@ -36,31 +42,17 @@ public class Unit : MonoBehaviour
     protected GameObject bulletPrefab;
     protected Transform firePoint;
 
-    private Collider allowCollider;
+
+    protected Animator anim;
+    protected Collider allowCollider;
 
     Ray ray;
     RaycastHit hit;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        InvokeRepeating("TargetUpdate", 0f, 0.5f);
-        //테스트용
-
-        allowCollider = GameManager.instance.allowMoveObj.GetComponent<Collider>();
-        Debug.Log("collider"+allowCollider);
-
-        btn3x3 = GameManager.instance.btn3x3Obj.GetComponent<Btn3x3>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        UnitMove();
-    }
-
-    protected void OnMouseDown()
+    /// <summary>
+    /// 이건 나중에 개인으로 넘겨줘야겠다
+    /// </summary>
+    protected virtual void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
@@ -69,7 +61,6 @@ public class Unit : MonoBehaviour
         Debug.Log("캐릭터");
 
         GameManager.instance.btn_3x3_state = GameManager.Btn_3x3_state.CLICK_Unit;
-
         #region btn 3x3 Setting
         //0 Q  Move : 이동
         btn3x3.BtnSetting(0, 0, 0, "IMG_Character/Move", "IMG_ETC/None");
@@ -114,44 +105,131 @@ public class Unit : MonoBehaviour
     }
 
     /// <summary>
-    /// 소환이되면, 마우스위치가 장판위라면 이동 아니라면 리턴
+    /// 소환이되면, 마우스위치가 장판위라면 이동 아니라면 리턴, 이거 쓰기전에 Canmove 트루시키자
     /// </summary>
     public void UnitMove()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray,out hit))
+        if(canMove == true)
         {
-            if(hit.collider == allowCollider && Input.GetMouseButtonDown(0))
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
             {
+                if (hit.collider == allowCollider && Input.GetMouseButtonDown(0))
+                {
 
-                //Debug.Log("dd");
-                transform.LookAt(hit.point);
+                    //Debug.Log("dd");
+                    transform.LookAt(hit.point);
 
-                float distance = Vector3.Distance(transform.position, hit.point);
-                float speed = distance / moveSpeed;
-           
-                transform.DOMove(hit.point, speed).SetEase(Ease.Linear);
+                    //무브 애니메이션 재생
+                    anim.SetBool("isMove", true);
+                    float distance = Vector3.Distance(transform.position, hit.point);
+                    float speed = distance / moveSpeed;
 
+                    transform.DOMove(hit.point, speed).SetEase(Ease.Linear);
+
+                }
             }
         }
     }
 
-    public void Shoot()
+    public void UnitStop()
     {
-        GameObject bullet_Obj = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bullet_Obj.GetComponent<Bullet>();
-
-        if (bullet != null)
+        if(canMove == true && Vector3.Distance(this.transform.position, target.position) <= 0.4f)
         {
-            bullet.chaseTarget(target);
+            anim.SetBool("isMove", false);
         }
+    }
+
+    /// <summary>
+    /// 공격
+    /// </summary>
+    public void Attack_Shoot()
+    {
+        fireCountdown += Time.deltaTime;
+        if (attackmode && fireCountdown >= attackSpeed && target != null)
+        {
+            //Vector3 directionToTarget = target.position - transform.position;
+            //transform.LookAt(target);
+            transform.DOLookAt(target.position, 0.5f);
+            //Debug.Log("여기까지 들어옴");
+            //characterType에 해당하는 총알가져오기
+            GameObject bulletObj = MngBullet.instance.GetBullet(characterType);
+            fireCountdown = 0;
+            if(firePoint != null)
+            {
+                bulletObj.transform.position = firePoint.position;
+            }
+
+            Bullet bullet = bulletObj.GetComponent<Bullet>();
+            bullet.damagePhysic = attackDamage;
+            bullet.damageMagic = magicDamage;
+            bullet.target = target;
+
+            anim.SetBool("IsAttack", true);
+
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    /// <summary>
+    /// bullet을 안쓰는 캐릭용
+    /// </summary>
+    public void Attack_Melee()
+    {
+        if(target != null)
+        {
+            Enemy enemy = target.GetComponent<Enemy>();
+            if (enemy != null)
+                enemy.TakeDamage(attackDamage, magicDamage);
+        }
+    }
+
+    public void GatherResource(int kind)
+    {
+        switch (kind)
+        {
+            //Ore
+            case 0:
+
+                break;
+            //Wood
+            case 1:
+
+                break;
+        }
+    }
+
+    /// <summary>
+    /// 업그레이드 장소로 이동 1이안차있으면 1, 2가 차있으면 3
+    /// </summary>
+    public void Combinate()
+    {
+
+    }
+
+    /// <summary>
+    /// 뭉쳐서 만든 캐릭이면 분해함
+    /// </summary>
+    public void DisAssemble()
+    {
+
+    }
+
+    /// <summary>
+    /// 위치고정
+    /// </summary>
+    public void Anchor() {
+        canMove = false;
     }
 
     /// <summary>
     /// 타겟을 바꾸는 매커니즘
     /// </summary>
-    void TargetUpdate()
+    public void TargetUpdate()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
@@ -175,10 +253,13 @@ public class Unit : MonoBehaviour
         }
         else//사거리 밖이면 타깃을 초기화
         {
+            anim.SetBool("IsAttack", false);
             target = null;
         }
 
     }
+
+
 
     /// <summary>
     /// 기즈모로 에디터에서만 임시로 범위보기

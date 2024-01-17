@@ -107,9 +107,9 @@ GameObject:
   - component: {fileID: 95592312361253384}
   - component: {fileID: 6868741882546367414}
   - component: {fileID: 8700578913700285790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WoodGolem
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

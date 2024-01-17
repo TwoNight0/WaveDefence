@@ -1616,9 +1616,9 @@ GameObject:
   - component: {fileID: 95765118374073618}
   - component: {fileID: -164450100296900185}
   - component: {fileID: 4675438299190340262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HorseMan
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

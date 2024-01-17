@@ -468,9 +468,9 @@ GameObject:
   - component: {fileID: 95919943257465206}
   - component: {fileID: -2779912463634363477}
   - component: {fileID: 753573016277458675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slave2
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

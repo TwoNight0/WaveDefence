@@ -8,6 +8,8 @@ TagManager:
   - Path
   - Enemy
   - Bullet
+  - FxTemporaire
+  - Unit
   layers:
   - Default
   - TransparentFX

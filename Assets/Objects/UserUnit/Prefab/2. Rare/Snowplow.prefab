@@ -461,9 +461,9 @@ GameObject:
   - component: {fileID: 95294076146720008}
   - component: {fileID: 2367806222397203856}
   - component: {fileID: 2649849980733048926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Snowplow
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

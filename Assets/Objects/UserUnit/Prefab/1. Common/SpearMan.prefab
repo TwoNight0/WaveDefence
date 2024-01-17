@@ -692,9 +692,9 @@ GameObject:
   - component: {fileID: 95090575821277438}
   - component: {fileID: -4782278881319407218}
   - component: {fileID: 1182403981806163277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpearMan
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

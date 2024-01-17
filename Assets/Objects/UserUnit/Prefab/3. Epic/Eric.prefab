@@ -1432,9 +1432,9 @@ GameObject:
   - component: {fileID: 1338158378579552490}
   - component: {fileID: 6995686243297075191}
   - component: {fileID: 5908903454024319070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eric
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

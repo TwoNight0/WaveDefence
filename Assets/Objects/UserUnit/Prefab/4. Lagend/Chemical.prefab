@@ -2757,9 +2757,9 @@ GameObject:
   - component: {fileID: 3716350784678828422}
   - component: {fileID: -4260759371755378784}
   - component: {fileID: -544235403723146089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chemical
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

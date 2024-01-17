@@ -5348,9 +5348,9 @@ GameObject:
   - component: {fileID: 7409677301647253282}
   - component: {fileID: -7796624396989924519}
   - component: {fileID: 3489250598596759530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ET
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -486,9 +486,9 @@ GameObject:
   - component: {fileID: 95520035382318626}
   - component: {fileID: 5986681638621060205}
   - component: {fileID: 3578504911945234555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DeathKnight
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

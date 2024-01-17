@@ -276,9 +276,9 @@ GameObject:
   - component: {fileID: 95826298684406162}
   - component: {fileID: -4579483289480542556}
   - component: {fileID: 2495030260460409699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shaman
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

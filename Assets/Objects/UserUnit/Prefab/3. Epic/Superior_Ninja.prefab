@@ -580,9 +580,9 @@ GameObject:
   - component: {fileID: 5130229815644744241}
   - component: {fileID: -5555341296635495651}
   - component: {fileID: 5649026548611533741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Superior_Ninja
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

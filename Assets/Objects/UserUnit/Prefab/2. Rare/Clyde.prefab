@@ -4937,9 +4937,9 @@ GameObject:
   - component: {fileID: 1762018173025169313}
   - component: {fileID: 8632653197107458294}
   - component: {fileID: 4068823434327708837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Clyde
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

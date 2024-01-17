@@ -1842,9 +1842,9 @@ GameObject:
   - component: {fileID: 776543977523952593}
   - component: {fileID: 4341857801006389190}
   - component: {fileID: 2689171311009562465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lambo
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

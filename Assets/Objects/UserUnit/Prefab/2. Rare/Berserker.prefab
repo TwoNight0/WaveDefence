@@ -892,9 +892,9 @@ GameObject:
   - component: {fileID: 95228858151955370}
   - component: {fileID: -1797639716593797444}
   - component: {fileID: 1635587396295926042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Berserker
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

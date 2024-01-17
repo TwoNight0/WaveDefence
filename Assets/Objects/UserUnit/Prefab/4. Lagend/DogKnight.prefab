@@ -1263,9 +1263,9 @@ GameObject:
   - component: {fileID: -9100398411379553808}
   - component: {fileID: 479538463598066740}
   - component: {fileID: 4813299101253318197}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DogKnight
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1320,7 +1320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f3530a5757c3744ab90a89c007ad93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoMode: 1
+  characterType: 
+  canMove: 1
+  attackmode: 1
   enemyTag: Enemy
   turnSpeed: 10
 --- !u!136 &479538463598066740
