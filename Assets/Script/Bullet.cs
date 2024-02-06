@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
 
     private void OnEnable()
     {
-        InvokeRepeating("TurnTotarget", 0f, 0.8f);
+        //InvokeRepeating("TurnTotarget", 0f, 0.8f);
     }
 
     private void OnDisable()
@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
         {
             return;
         }
-
+        TurnTotarget();
         Vector3 dir = target.GetComponent<Collider>().bounds.center - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
     }

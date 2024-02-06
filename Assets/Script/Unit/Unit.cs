@@ -8,7 +8,8 @@ public class Unit : MonoBehaviour
 {
 
     protected Btn3x3 btn3x3;
-    protected Transform target;
+
+    public Transform target;
     private Enemy targetEnemy;
     //public Transform partToRotate;
     protected new string name = "temp";
@@ -34,7 +35,10 @@ public class Unit : MonoBehaviour
     public bool canMove = true;
     public bool attackmode = true;
 
+    protected GameObject bulletObj;
+
     [Header("유니티 설정")]
+    //가려야할수도?
     public string enemyTag = "Enemy";
     public float turnSpeed = 10f;
 
@@ -142,38 +146,65 @@ public class Unit : MonoBehaviour
     }
 
     /// <summary>
-    /// 공격
+    /// 원거리 공격
     /// </summary>
+    /// 
     public void Attack_Shoot()
     {
         fireCountdown += Time.deltaTime;
         if (attackmode && fireCountdown >= attackSpeed && target != null)
         {
-            //Vector3 directionToTarget = target.position - transform.position;
-            //transform.LookAt(target);
-            transform.DOLookAt(target.position, 0.5f);
-            //Debug.Log("여기까지 들어옴");
-            //characterType에 해당하는 총알가져오기
-            GameObject bulletObj = MngBullet.instance.GetBullet(characterType);
             fireCountdown = 0;
-            if(firePoint != null)
+      
+            //유닛 타깃 바라보기
+            transform.DOLookAt(target.position, 0.3f);
+            if (target == null)
+            {
+                Debug.Log("타겟이 없습니다");
+                return;
+            }
+
+            if (firePoint != null)
             {
                 bulletObj.transform.position = firePoint.position;
             }
 
+            //불렛 스크립트 가져오기
             Bullet bullet = bulletObj.GetComponent<Bullet>();
-            bullet.damagePhysic = attackDamage;
-            bullet.damageMagic = magicDamage;
+            //불렛 타겟설정(이걸 좀 일찍해야하는데..)
             bullet.target = target;
+            //불렛에 데미지 할당
+            bullet.damagePhysic = attackDamage;
+            //불렛에 마법데미지 할당
+            bullet.damageMagic = magicDamage;
 
-            anim.SetBool("IsAttack", true);
+            //bullet 꺼두기
+            bulletObj.SetActive(false);
 
+            anim.SetTrigger("IsAttack");
         }
         else
         {
             return;
         }
     }
+
+
+    public void test()
+    {
+        Debug.Log("어택모드 : " + attackmode);
+        Debug.Log("공격쿨 : " + fireCountdown + "/" + "공격속도" + attackSpeed);
+        Debug.Log("타겟 : " + target);
+    }
+
+    /// <summary>
+    /// 꺼둔 불렛을 다시 켜서 적을 맞추게 하는 기능
+    /// </summary>
+    public void BullectSetActive()
+    {       
+        bulletObj.SetActive(true);
+    }
+
 
     /// <summary>
     /// bullet을 안쓰는 캐릭용
@@ -250,11 +281,13 @@ public class Unit : MonoBehaviour
         {
             target = newarestEnemy.transform;
             targetEnemy = target.GetComponent<Enemy>();
+            attackmode = true;
         }
         else//사거리 밖이면 타깃을 초기화
         {
-            anim.SetBool("IsAttack", false);
             target = null;
+            attackmode = false;
+            //Debug.Log("타겟 : null");
         }
 
     }

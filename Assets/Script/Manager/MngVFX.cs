@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using DG.Tweening;
 
 public class MngVFX : MonoBehaviour
 {
@@ -21,6 +23,17 @@ public class MngVFX : MonoBehaviour
     public GameObject effectMagicDamage;
     //돈이펙트, 
     public GameObject effectMoney;
+
+    //텍스트
+    //물리 데미지 텍스트
+    public TextMeshProUGUI TextPhysicDamage;
+    //마법 데미지 텍스트
+    public TextMeshProUGUI TextMagicDamage;
+    //돈 텍스트
+    public TextMeshProUGUI TextMoneyDamage;
+
+
+
 
     void Start()
     {

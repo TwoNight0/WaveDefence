@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e5a6a1f0b2cc743821a23a9b9dff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   characterType: 
   canMove: 1
   attackmode: 1
@@ -999,7 +1000,7 @@ Transform:
   m_GameObject: {fileID: 9020157014728970703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.7, y: 24.3, z: -6.1}
+  m_LocalPosition: {x: -34.4, y: 40.1, z: 29.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

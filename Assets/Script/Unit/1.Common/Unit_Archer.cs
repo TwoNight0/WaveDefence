@@ -30,7 +30,8 @@ public class Unit_Archer : Unit
         //Debug.Log(attackmode);
         characterType = "Archer";
 
-        InvokeRepeating("TargetUpdate", 0f, 0.5f);
+        //타깃 업데이트
+        //InvokeRepeating("TargetUpdate", 0f, 0.1f);
         
         firePoint = GameObject.Find("FirePoint").transform;
 
@@ -39,14 +40,17 @@ public class Unit_Archer : Unit
         anim = GetComponent<Animator>();
 
         btn3x3 = GameManager.instance.btn3x3Obj.GetComponent<Btn3x3>();
-       
+
+        //characterType에 해당하는 총알가져오기
+        bulletObj = MngBullet.instance.GetBullet(characterType);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        TargetUpdate();
         Attack_Shoot();
+     
         //UnitMove();
         //UnitStop();
     }
